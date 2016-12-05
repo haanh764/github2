@@ -15,13 +15,6 @@
  */
 package com.github.mobile.ui.issue;
 
-import static android.app.SearchManager.APP_DATA;
-import static android.app.SearchManager.QUERY;
-import static android.content.Intent.ACTION_SEARCH;
-import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
-import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
-import static com.github.mobile.Intents.EXTRA_REPOSITORY;
-
 import android.app.SearchManager;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -40,6 +33,13 @@ import com.github.mobile.util.ToastUtils;
 import com.google.inject.Inject;
 
 import org.eclipse.egit.github.core.Repository;
+
+import static android.app.SearchManager.APP_DATA;
+import static android.app.SearchManager.QUERY;
+import static android.content.Intent.ACTION_SEARCH;
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
+import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
+import static com.github.mobile.Intents.EXTRA_REPOSITORY;
 
 /**
  * Activity to search issues

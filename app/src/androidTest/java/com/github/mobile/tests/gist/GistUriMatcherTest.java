@@ -19,8 +19,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.test.AndroidTestCase;
 
-import com.github.mobile.core.gist.GistUriMatcher;
-
 import org.eclipse.egit.github.core.Gist;
 
 import static com.github.mobile.Intents.EXTRA_GIST;

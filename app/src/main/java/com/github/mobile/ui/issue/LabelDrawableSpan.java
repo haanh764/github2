@@ -15,11 +15,6 @@
  */
 package com.github.mobile.ui.issue;
 
-import static android.graphics.Color.WHITE;
-import static android.graphics.Typeface.DEFAULT_BOLD;
-import static java.lang.Integer.MIN_VALUE;
-import static java.lang.String.CASE_INSENSITIVE_ORDER;
-import static java.util.Locale.US;
 import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -36,11 +31,17 @@ import com.github.mobile.R;
 import com.github.mobile.ui.StyledText;
 import com.github.mobile.util.ServiceUtils;
 
+import org.eclipse.egit.github.core.Label;
+
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Comparator;
 
-import org.eclipse.egit.github.core.Label;
+import static android.graphics.Color.WHITE;
+import static android.graphics.Typeface.DEFAULT_BOLD;
+import static java.lang.Integer.MIN_VALUE;
+import static java.lang.String.CASE_INSENSITIVE_ORDER;
+import static java.util.Locale.US;
 
 /**
  * Span that draws a {@link Label}

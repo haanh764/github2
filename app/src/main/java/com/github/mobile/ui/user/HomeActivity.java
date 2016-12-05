@@ -1,18 +1,4 @@
-/*
- * Copyright 2012 GitHub Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *  http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.github.mobile.ui.user;
 
 import android.app.SearchManager;
@@ -46,7 +32,6 @@ import com.github.mobile.core.user.UserComparator;
 import com.github.mobile.persistence.AccountDataManager;
 import com.github.mobile.ui.TabPagerActivity;
 import com.github.mobile.ui.UriLauncherActivity;
-import com.github.mobile.ui.gist.GistsActivity;
 import com.github.mobile.ui.issue.FiltersViewActivity;
 import com.github.mobile.ui.issue.IssueDashboardActivity;
 import com.github.mobile.ui.notification.NotificationsListActivity;
@@ -57,12 +42,12 @@ import com.github.mobile.util.TypefaceUtils;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 
+import org.eclipse.egit.github.core.User;
+
 import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
-
-import org.eclipse.egit.github.core.User;
 
 /**
  * Home screen activity
@@ -295,7 +280,7 @@ public class HomeActivity extends TabPagerActivity<HomePagerAdapter> implements
         switch (menuItem.getItemId()) {
             case R.id.navigation_gists:
                 navigationDrawer.closeDrawer(GravityCompat.START);
-                startActivity(new Intent(this, GistsActivity.class));
+                startActivity(FiltersViewActivity.createIntent());
                 break;
             case R.id.navigation_dashboard:
                 navigationDrawer.closeDrawer(GravityCompat.START);
@@ -308,7 +293,7 @@ public class HomeActivity extends TabPagerActivity<HomePagerAdapter> implements
             case R.id.navigation_report_issue:
                 navigationDrawer.closeDrawer(GravityCompat.START);
                 UriLauncherActivity.launchUri(this,
-                        Uri.parse("https://github.com/jonan/ForkHub/issues"));
+                        Uri.parse("https://github.com/haanh764"));
                 break;
         }
 

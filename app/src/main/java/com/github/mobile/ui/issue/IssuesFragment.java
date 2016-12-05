@@ -15,15 +15,6 @@
  */
 package com.github.mobile.ui.issue;
 
-import static android.app.Activity.RESULT_OK;
-import static android.view.View.GONE;
-import static android.view.View.VISIBLE;
-import static com.github.mobile.Intents.EXTRA_ISSUE;
-import static com.github.mobile.Intents.EXTRA_ISSUE_FILTER;
-import static com.github.mobile.Intents.EXTRA_REPOSITORY;
-import static com.github.mobile.RequestCodes.ISSUE_CREATE;
-import static com.github.mobile.RequestCodes.ISSUE_FILTER_EDIT;
-import static com.github.mobile.RequestCodes.ISSUE_VIEW;
 import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Context;
@@ -52,9 +43,6 @@ import com.github.mobile.util.AvatarLoader;
 import com.github.mobile.util.ToastUtils;
 import com.google.inject.Inject;
 
-import java.util.Collection;
-import java.util.List;
-
 import org.eclipse.egit.github.core.Issue;
 import org.eclipse.egit.github.core.Label;
 import org.eclipse.egit.github.core.Milestone;
@@ -62,6 +50,19 @@ import org.eclipse.egit.github.core.Repository;
 import org.eclipse.egit.github.core.User;
 import org.eclipse.egit.github.core.client.PageIterator;
 import org.eclipse.egit.github.core.service.IssueService;
+
+import java.util.Collection;
+import java.util.List;
+
+import static android.app.Activity.RESULT_OK;
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
+import static com.github.mobile.Intents.EXTRA_ISSUE;
+import static com.github.mobile.Intents.EXTRA_ISSUE_FILTER;
+import static com.github.mobile.Intents.EXTRA_REPOSITORY;
+import static com.github.mobile.RequestCodes.ISSUE_CREATE;
+import static com.github.mobile.RequestCodes.ISSUE_FILTER_EDIT;
+import static com.github.mobile.RequestCodes.ISSUE_VIEW;
 
 /**
  * Fragment to display a list of issues

@@ -28,7 +28,6 @@ import static android.accounts.AccountManager.KEY_AUTHTOKEN;
 import static android.accounts.AccountManager.KEY_BOOLEAN_RESULT;
 import static android.accounts.AccountManager.KEY_INTENT;
 import static com.github.mobile.accounts.AccountConstants.ACCOUNT_TYPE;
-import static com.github.mobile.accounts.AccountConstants.APP_NOTE;
 import static com.github.mobile.accounts.LoginActivity.PARAM_AUTHTOKEN_TYPE;
 import static com.github.mobile.accounts.LoginActivity.PARAM_USERNAME;
 
@@ -117,7 +116,6 @@ class AccountAuthenticator extends AbstractAccountAuthenticator {
      */
     public static String createAuthorization(final OAuthService service) throws IOException {
         Authorization auth = new Authorization();
-        auth.setNote(APP_NOTE + " " + System.currentTimeMillis());
         auth.setScopes(SCOPES);
         auth = service.createAuthorization(auth);
         return auth != null ? auth.getToken() : null;

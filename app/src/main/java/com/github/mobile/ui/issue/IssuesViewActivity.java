@@ -15,12 +15,6 @@
  */
 package com.github.mobile.ui.issue;
 
-import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
-import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
-import static com.github.mobile.Intents.EXTRA_ISSUE_NUMBERS;
-import static com.github.mobile.Intents.EXTRA_POSITION;
-import static com.github.mobile.Intents.EXTRA_REPOSITORIES;
-import static com.github.mobile.Intents.EXTRA_REPOSITORY;
 import android.accounts.Account;
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,16 +30,11 @@ import com.github.mobile.core.issue.IssueUtils;
 import com.github.mobile.core.repo.RefreshRepositoryTask;
 import com.github.mobile.ui.FragmentProvider;
 import com.github.mobile.ui.PagerActivity;
+import com.github.mobile.ui.UriLauncherActivity;
 import com.github.mobile.ui.ViewPager;
 import com.github.mobile.ui.repo.RepositoryViewActivity;
-import com.github.mobile.ui.UriLauncherActivity;
 import com.github.mobile.util.AvatarLoader;
 import com.google.inject.Inject;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.concurrent.atomic.AtomicReference;
 
 import org.eclipse.egit.github.core.Issue;
 import org.eclipse.egit.github.core.Repository;
@@ -53,6 +42,18 @@ import org.eclipse.egit.github.core.RepositoryId;
 import org.eclipse.egit.github.core.RepositoryIssue;
 import org.eclipse.egit.github.core.User;
 import org.eclipse.egit.github.core.service.CollaboratorService;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.concurrent.atomic.AtomicReference;
+
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
+import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
+import static com.github.mobile.Intents.EXTRA_ISSUE_NUMBERS;
+import static com.github.mobile.Intents.EXTRA_POSITION;
+import static com.github.mobile.Intents.EXTRA_REPOSITORIES;
+import static com.github.mobile.Intents.EXTRA_REPOSITORY;
 
 /**
  * Activity to display a collection of issues or pull requests in a pager

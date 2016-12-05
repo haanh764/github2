@@ -63,8 +63,8 @@ public class RefreshIssueTask extends AuthenticatedUserTask<FullIssue> {
      * @param commentImageGetter
      */
     public RefreshIssueTask(Context context,
-            IRepositoryIdProvider repositoryId, int issueNumber,
-            HttpImageGetter bodyImageGetter, HttpImageGetter commentImageGetter) {
+                            IRepositoryIdProvider repositoryId, int issueNumber,
+                            HttpImageGetter bodyImageGetter, HttpImageGetter commentImageGetter) {
         super(context);
 
         this.repositoryId = repositoryId;

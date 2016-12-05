@@ -1,18 +1,4 @@
-/*
- * Copyright 2012 GitHub Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *  http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.github.mobile.ui.ref;
 
 import static com.github.mobile.Intents.EXTRA_BASE;
@@ -39,7 +25,6 @@ import com.github.mobile.R;
 import com.github.mobile.core.code.RefreshBlobTask;
 import com.github.mobile.core.commit.CommitUtils;
 import com.github.mobile.ui.BaseActivity;
-import com.github.mobile.ui.MarkdownLoader;
 import com.github.mobile.util.AvatarLoader;
 import com.github.mobile.util.HttpImageGetter;
 import com.github.mobile.util.MarkdownUtils;
@@ -205,11 +190,11 @@ public class BranchFileViewActivity extends BaseActivity implements
         }
     }
 
-    @Override
-    public Loader<CharSequence> onCreateLoader(int loader, Bundle args) {
-        final String raw = args.getString(ARG_TEXT);
-        return new MarkdownLoader(this, null, raw, imageGetter, false);
-    }
+    //@Override
+    //public Loader<CharSequence> onCreateLoader(int loader, Bundle args) {
+        //final String raw = args.getString(ARG_TEXT);
+        //return new MarkdownLoader(this, null, raw, imageGetter, false);
+    //}
 
     @Override
     public void onLoadFinished(Loader<CharSequence> loader,

@@ -1,6 +1,5 @@
 package com.github.mobile.ui.issue;
 
-import static java.lang.String.CASE_INSENSITIVE_ORDER;
 import android.os.Bundle;
 import android.support.v4.content.Loader;
 import android.view.View;
@@ -19,6 +18,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+
+import static java.lang.String.CASE_INSENSITIVE_ORDER;
 
 /**
  * Fragment to display a list of {@link IssueFilter} objects

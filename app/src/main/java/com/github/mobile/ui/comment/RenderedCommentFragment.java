@@ -14,7 +14,6 @@ import com.github.kevinsawicki.wishlist.Keyboard;
 import com.github.kevinsawicki.wishlist.ViewUtils;
 import com.github.mobile.R;
 import com.github.mobile.ui.DialogFragment;
-import com.github.mobile.ui.MarkdownLoader;
 import com.github.mobile.util.HttpImageGetter;
 import com.github.mobile.util.ToastUtils;
 import com.google.inject.Inject;

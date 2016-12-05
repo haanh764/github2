@@ -15,9 +15,6 @@
  */
 package com.github.mobile.ui.issue;
 
-import static android.app.Activity.RESULT_OK;
-import static android.content.DialogInterface.BUTTON_NEGATIVE;
-import static android.content.DialogInterface.BUTTON_NEUTRAL;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -36,9 +33,13 @@ import com.github.mobile.R;
 import com.github.mobile.ui.DialogFragmentActivity;
 import com.github.mobile.ui.SingleChoiceDialogFragment;
 
+import org.eclipse.egit.github.core.Milestone;
+
 import java.util.ArrayList;
 
-import org.eclipse.egit.github.core.Milestone;
+import static android.app.Activity.RESULT_OK;
+import static android.content.DialogInterface.BUTTON_NEGATIVE;
+import static android.content.DialogInterface.BUTTON_NEUTRAL;
 
 /**
  * Dialog fragment to select an issue milestone

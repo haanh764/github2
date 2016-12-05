@@ -15,10 +15,6 @@
  */
 package com.github.mobile.ui.issue;
 
-import static android.app.Activity.RESULT_OK;
-import static android.content.DialogInterface.BUTTON_NEGATIVE;
-import static android.content.DialogInterface.BUTTON_NEUTRAL;
-import static android.content.DialogInterface.BUTTON_POSITIVE;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -37,11 +33,16 @@ import com.github.mobile.ui.DialogFragmentActivity;
 import com.github.mobile.ui.DialogFragmentHelper;
 import com.github.mobile.ui.LightAlertDialog;
 
+import org.eclipse.egit.github.core.Label;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 
-import org.eclipse.egit.github.core.Label;
+import static android.app.Activity.RESULT_OK;
+import static android.content.DialogInterface.BUTTON_NEGATIVE;
+import static android.content.DialogInterface.BUTTON_NEUTRAL;
+import static android.content.DialogInterface.BUTTON_POSITIVE;
 
 /**
  * Dialog fragment to present labels where one or more can be selected

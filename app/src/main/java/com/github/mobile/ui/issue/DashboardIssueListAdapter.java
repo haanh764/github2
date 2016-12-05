@@ -18,7 +18,6 @@ package com.github.mobile.ui.issue;
 import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.TextView;
 
 import com.github.mobile.R;
 import com.github.mobile.core.issue.IssueUtils;

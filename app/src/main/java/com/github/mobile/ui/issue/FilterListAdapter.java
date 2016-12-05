@@ -24,11 +24,11 @@ import com.github.mobile.R;
 import com.github.mobile.core.issue.IssueFilter;
 import com.github.mobile.util.AvatarLoader;
 
-import java.util.Collection;
-
 import org.eclipse.egit.github.core.Label;
 import org.eclipse.egit.github.core.Milestone;
 import org.eclipse.egit.github.core.User;
+
+import java.util.Collection;
 
 /**
  * Adapter to display a list of {@link IssueFilter} objects

@@ -15,10 +15,6 @@
  */
 package com.github.mobile.core.issue;
 
-import static com.github.mobile.RequestCodes.ISSUE_CLOSE;
-import static com.github.mobile.RequestCodes.ISSUE_REOPEN;
-import static org.eclipse.egit.github.core.service.IssueService.STATE_CLOSED;
-import static org.eclipse.egit.github.core.service.IssueService.STATE_OPEN;
 import android.accounts.Account;
 
 import com.github.mobile.R;
@@ -29,6 +25,11 @@ import com.google.inject.Inject;
 
 import org.eclipse.egit.github.core.IRepositoryIdProvider;
 import org.eclipse.egit.github.core.Issue;
+
+import static com.github.mobile.RequestCodes.ISSUE_CLOSE;
+import static com.github.mobile.RequestCodes.ISSUE_REOPEN;
+import static org.eclipse.egit.github.core.service.IssueService.STATE_CLOSED;
+import static org.eclipse.egit.github.core.service.IssueService.STATE_OPEN;
 
 /**
  * Task to close or reopen an issue

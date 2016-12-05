@@ -30,11 +30,7 @@ import roboguice.event.EventManager;
 import roboguice.inject.RoboInjector;
 import roboguice.util.RoboContext;
 
-/**
- * This is a base activity that adds Roboguice support for AppCompat's ActionBarActivity
- * <p>
- * Based on <a href="https://github.com/mccrajs">@mccrajs's</a> implementation <a href="https://github.com/metova/roboguice-appcompat/blob/master/src/com/metova/roboguice/appcompat/RoboActionBarActivity.java">here</a>.
- */
+
 public class RoboActionBarActivity extends AppCompatActivity implements RoboContext {
 
     protected EventManager eventManager;

@@ -1,25 +1,5 @@
-/*
- * Copyright 2012 GitHub Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *  http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-package com.github.mobile.ui.user;
 
-import static com.github.mobile.ui.user.UserViewActivity.TAB_ACTIVITY;
-import static com.github.mobile.ui.user.UserViewActivity.TAB_FOLLOWEES;
-import static com.github.mobile.ui.user.UserViewActivity.TAB_FOLLOWERS;
-import static com.github.mobile.ui.user.UserViewActivity.TAB_REPOSITORIES;
-import static com.github.mobile.ui.user.UserViewActivity.TAB_STARS;
+package com.github.mobile.ui.user;
 
 import android.content.res.Resources;
 import android.support.v4.app.Fragment;
@@ -29,7 +9,13 @@ import com.github.mobile.R;
 import com.github.mobile.ui.FragmentPagerAdapter;
 import com.github.mobile.ui.repo.UserOwnedRepositoryListFragment;
 import com.github.mobile.ui.repo.UserStarredRepositoryListFragment;
-import com.github.mobile.ui.team.TeamListFragment;
+
+import static com.github.mobile.ui.user.UserViewActivity.TAB_ACTIVITY;
+import static com.github.mobile.ui.user.UserViewActivity.TAB_FOLLOWEES;
+import static com.github.mobile.ui.user.UserViewActivity.TAB_FOLLOWERS;
+import static com.github.mobile.ui.user.UserViewActivity.TAB_REPOSITORIES;
+import static com.github.mobile.ui.user.UserViewActivity.TAB_STARS;
+
 
 /**
  * Pager adapter for a user's different views
@@ -63,7 +49,7 @@ public class UserPagerAdapter extends FragmentPagerAdapter {
         case TAB_STARS:
             return isOrg ? new OrgMembersFragment() : new UserStarredRepositoryListFragment();
         case TAB_FOLLOWERS:
-            return isOrg ? new TeamListFragment() : new UserFollowersFragment();
+
         case TAB_FOLLOWEES:
             return new UserFollowingFragment();
         default:

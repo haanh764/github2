@@ -15,7 +15,6 @@
  */
 package com.github.mobile.ui.issue;
 
-import static java.lang.String.CASE_INSENSITIVE_ORDER;
 import android.accounts.Account;
 import android.util.Log;
 
@@ -23,6 +22,10 @@ import com.github.mobile.R;
 import com.github.mobile.ui.DialogFragmentActivity;
 import com.github.mobile.ui.ProgressDialogTask;
 import com.github.mobile.util.ToastUtils;
+
+import org.eclipse.egit.github.core.IRepositoryIdProvider;
+import org.eclipse.egit.github.core.Label;
+import org.eclipse.egit.github.core.service.LabelService;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -32,9 +35,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
-import org.eclipse.egit.github.core.IRepositoryIdProvider;
-import org.eclipse.egit.github.core.Label;
-import org.eclipse.egit.github.core.service.LabelService;
+import static java.lang.String.CASE_INSENSITIVE_ORDER;
 
 /**
  * Dialog helper to display a list of possibly selected issue labels

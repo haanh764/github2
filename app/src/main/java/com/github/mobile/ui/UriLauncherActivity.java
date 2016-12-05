@@ -1,26 +1,6 @@
-/*
- * Copyright 2012 GitHub Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *  http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 package com.github.mobile.ui;
 
-import static android.content.DialogInterface.BUTTON_POSITIVE;
-import static android.content.Intent.ACTION_VIEW;
-import static android.content.Intent.CATEGORY_BROWSABLE;
-import static org.eclipse.egit.github.core.client.IGitHubConstants.HOST_DEFAULT;
-import static org.eclipse.egit.github.core.client.IGitHubConstants.HOST_GISTS;
-import static org.eclipse.egit.github.core.client.IGitHubConstants.PROTOCOL_HTTPS;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -35,7 +15,6 @@ import android.text.TextUtils;
 
 import com.github.mobile.R;
 import com.github.mobile.core.commit.CommitUriMatcher;
-import com.github.mobile.core.gist.GistUriMatcher;
 import com.github.mobile.core.issue.IssueUriMatcher;
 import com.github.mobile.core.repo.RepositoryUriMatcher;
 import com.github.mobile.core.user.UserUriMatcher;
@@ -43,6 +22,12 @@ import com.github.mobile.core.user.UserUriMatcher;
 import java.net.URI;
 import java.text.MessageFormat;
 import java.util.List;
+
+import static android.content.DialogInterface.BUTTON_POSITIVE;
+import static android.content.Intent.ACTION_VIEW;
+import static android.content.Intent.CATEGORY_BROWSABLE;
+import static org.eclipse.egit.github.core.client.IGitHubConstants.HOST_DEFAULT;
+import static org.eclipse.egit.github.core.client.IGitHubConstants.PROTOCOL_HTTPS;
 
 /**
  * Activity to launch other activities based on the intent's data {@link URI}
@@ -77,8 +62,8 @@ public class UriLauncherActivity extends Activity {
             return null;
 
         Intent intent;
-        if (HOST_GISTS.equals(data.getHost())) {
-            intent = GistUriMatcher.getGistIntent(segments);
+        if (HOST_DEFAULT.equals(data.getHost())) {
+            intent = CommitUriMatcher.getCommitIntent(segments);
             if (intent != null) {
                 return intent;
             }

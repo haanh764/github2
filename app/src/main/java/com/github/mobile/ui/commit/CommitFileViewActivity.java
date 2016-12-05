@@ -18,7 +18,6 @@ import com.github.mobile.R;
 import com.github.mobile.core.code.RefreshBlobTask;
 import com.github.mobile.core.commit.CommitUtils;
 import com.github.mobile.ui.BaseActivity;
-import com.github.mobile.ui.MarkdownLoader;
 import com.github.mobile.util.AvatarLoader;
 import com.github.mobile.util.HttpImageGetter;
 import com.github.mobile.util.MarkdownUtils;

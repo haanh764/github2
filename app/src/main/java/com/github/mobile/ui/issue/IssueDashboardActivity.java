@@ -15,8 +15,6 @@
  */
 package com.github.mobile.ui.issue;
 
-import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
-import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -26,6 +24,9 @@ import com.github.mobile.R;
 import com.github.mobile.ui.TabPagerActivity;
 import com.github.mobile.ui.user.HomeActivity;
 import com.github.mobile.util.TypefaceUtils;
+
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
+import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
 
 /**
  * Dashboard activity for issues

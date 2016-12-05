@@ -15,27 +15,6 @@
  */
 package com.github.mobile.ui.issue;
 
-import static android.app.Activity.RESULT_OK;
-import static android.view.View.GONE;
-import static android.view.View.VISIBLE;
-import static com.github.mobile.Intents.EXTRA_COMMENT;
-import static com.github.mobile.Intents.EXTRA_ISSUE;
-import static com.github.mobile.Intents.EXTRA_ISSUE_NUMBER;
-import static com.github.mobile.Intents.EXTRA_IS_COLLABORATOR;
-import static com.github.mobile.Intents.EXTRA_REPOSITORY_NAME;
-import static com.github.mobile.Intents.EXTRA_REPOSITORY_OWNER;
-import static com.github.mobile.Intents.EXTRA_USER;
-import static com.github.mobile.RequestCodes.COMMENT_CREATE;
-import static com.github.mobile.RequestCodes.COMMENT_EDIT;
-import static com.github.mobile.RequestCodes.COMMENT_DELETE;
-import static com.github.mobile.RequestCodes.ISSUE_ASSIGNEE_UPDATE;
-import static com.github.mobile.RequestCodes.ISSUE_CLOSE;
-import static com.github.mobile.RequestCodes.ISSUE_EDIT;
-import static com.github.mobile.RequestCodes.ISSUE_LABELS_UPDATE;
-import static com.github.mobile.RequestCodes.ISSUE_MILESTONE_UPDATE;
-import static com.github.mobile.RequestCodes.ISSUE_REOPEN;
-import static org.eclipse.egit.github.core.service.IssueService.STATE_OPEN;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -58,8 +37,8 @@ import android.widget.TextView;
 import com.github.kevinsawicki.wishlist.ViewUtils;
 import com.github.mobile.R;
 import com.github.mobile.accounts.AccountUtils;
-import com.github.mobile.api.model.TimelineEvent;
 import com.github.mobile.api.model.ReactionSummary;
+import com.github.mobile.api.model.TimelineEvent;
 import com.github.mobile.core.issue.DeleteCommentTask;
 import com.github.mobile.core.issue.EditAssigneeTask;
 import com.github.mobile.core.issue.EditLabelsTask;
@@ -86,11 +65,6 @@ import com.github.mobile.util.ToastUtils;
 import com.github.mobile.util.TypefaceUtils;
 import com.google.inject.Inject;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-
 import org.eclipse.egit.github.core.Comment;
 import org.eclipse.egit.github.core.Issue;
 import org.eclipse.egit.github.core.Label;
@@ -100,6 +74,32 @@ import org.eclipse.egit.github.core.PullRequestMarker;
 import org.eclipse.egit.github.core.Repository;
 import org.eclipse.egit.github.core.RepositoryId;
 import org.eclipse.egit.github.core.User;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+
+import static android.app.Activity.RESULT_OK;
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
+import static com.github.mobile.Intents.EXTRA_COMMENT;
+import static com.github.mobile.Intents.EXTRA_ISSUE;
+import static com.github.mobile.Intents.EXTRA_ISSUE_NUMBER;
+import static com.github.mobile.Intents.EXTRA_IS_COLLABORATOR;
+import static com.github.mobile.Intents.EXTRA_REPOSITORY_NAME;
+import static com.github.mobile.Intents.EXTRA_REPOSITORY_OWNER;
+import static com.github.mobile.Intents.EXTRA_USER;
+import static com.github.mobile.RequestCodes.COMMENT_CREATE;
+import static com.github.mobile.RequestCodes.COMMENT_DELETE;
+import static com.github.mobile.RequestCodes.COMMENT_EDIT;
+import static com.github.mobile.RequestCodes.ISSUE_ASSIGNEE_UPDATE;
+import static com.github.mobile.RequestCodes.ISSUE_CLOSE;
+import static com.github.mobile.RequestCodes.ISSUE_EDIT;
+import static com.github.mobile.RequestCodes.ISSUE_LABELS_UPDATE;
+import static com.github.mobile.RequestCodes.ISSUE_MILESTONE_UPDATE;
+import static com.github.mobile.RequestCodes.ISSUE_REOPEN;
+import static org.eclipse.egit.github.core.service.IssueService.STATE_OPEN;
 
 /**
  * Fragment to display an issue

@@ -15,11 +15,6 @@
  */
 package com.github.mobile.ui.issue;
 
-import static com.github.mobile.Intents.EXTRA_ISSUE_NUMBER;
-import static com.github.mobile.Intents.EXTRA_IS_COLLABORATOR;
-import static com.github.mobile.Intents.EXTRA_REPOSITORY_NAME;
-import static com.github.mobile.Intents.EXTRA_REPOSITORY_OWNER;
-import static com.github.mobile.Intents.EXTRA_USER;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
@@ -29,13 +24,19 @@ import android.view.ViewGroup;
 import com.github.mobile.core.issue.IssueStore;
 import com.github.mobile.ui.FragmentStatePagerAdapter;
 
-import java.util.List;
-
 import org.eclipse.egit.github.core.Issue;
 import org.eclipse.egit.github.core.Repository;
 import org.eclipse.egit.github.core.RepositoryId;
 import org.eclipse.egit.github.core.RepositoryIssue;
 import org.eclipse.egit.github.core.User;
+
+import java.util.List;
+
+import static com.github.mobile.Intents.EXTRA_ISSUE_NUMBER;
+import static com.github.mobile.Intents.EXTRA_IS_COLLABORATOR;
+import static com.github.mobile.Intents.EXTRA_REPOSITORY_NAME;
+import static com.github.mobile.Intents.EXTRA_REPOSITORY_OWNER;
+import static com.github.mobile.Intents.EXTRA_USER;
 
 /**
  * Adapter to page through an {@link Issue} array
@@ -62,8 +63,8 @@ public class IssuesPagerAdapter extends FragmentStatePagerAdapter {
      * @param collaborator
      */
     public IssuesPagerAdapter(AppCompatActivity activity,
-            List<RepositoryId> repoIds, int[] issueNumbers,
-            IssueStore issueStore, boolean collaborator) {
+                              List<RepositoryId> repoIds, int[] issueNumbers,
+                              IssueStore issueStore, boolean collaborator) {
         super(activity);
 
         repos = repoIds;
@@ -146,7 +147,7 @@ public class IssuesPagerAdapter extends FragmentStatePagerAdapter {
      * @return this adapter
      */
     public IssuesPagerAdapter onDialogResult(int position, int requestCode,
-            int resultCode, Bundle arguments) {
+                                             int resultCode, Bundle arguments) {
         IssueFragment fragment = fragments.get(position);
         if (fragment != null)
             fragment.onDialogResult(requestCode, resultCode, arguments);

@@ -15,9 +15,6 @@
  */
 package com.github.mobile.ui.issue;
 
-import static android.graphics.Paint.STRIKE_THRU_TEXT_FLAG;
-import static org.eclipse.egit.github.core.service.IssueService.STATE_CLOSED;
-
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.text.TextUtils;
@@ -32,10 +29,13 @@ import com.github.mobile.ui.StyledText;
 import com.github.mobile.util.AvatarLoader;
 import com.github.mobile.util.TypefaceUtils;
 
+import org.eclipse.egit.github.core.Label;
+
 import java.util.Date;
 import java.util.List;
 
-import org.eclipse.egit.github.core.Label;
+import static android.graphics.Paint.STRIKE_THRU_TEXT_FLAG;
+import static org.eclipse.egit.github.core.service.IssueService.STATE_CLOSED;
 
 /**
  * Base list adapter to display issues

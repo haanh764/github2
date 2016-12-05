@@ -23,7 +23,6 @@ import com.github.mobile.accounts.GitHubAccount;
 import com.github.mobile.api.DateAdapter;
 import com.github.mobile.api.RequestConfiguration;
 import com.github.mobile.core.commit.CommitStore;
-import com.github.mobile.core.gist.GistStore;
 import com.github.mobile.core.issue.IssueStore;
 import com.github.mobile.persistence.OrganizationRepositories;
 import com.github.mobile.sync.SyncCampaign;

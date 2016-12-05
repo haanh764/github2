@@ -15,11 +15,6 @@
  */
 package com.github.mobile.ui.issue;
 
-import static com.github.mobile.Intents.EXTRA_COMMENT;
-import static com.github.mobile.Intents.EXTRA_ISSUE_NUMBER;
-import static com.github.mobile.Intents.EXTRA_REPOSITORY_NAME;
-import static com.github.mobile.Intents.EXTRA_REPOSITORY_OWNER;
-import static com.github.mobile.Intents.EXTRA_USER;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -34,6 +29,12 @@ import org.eclipse.egit.github.core.Comment;
 import org.eclipse.egit.github.core.Issue;
 import org.eclipse.egit.github.core.RepositoryId;
 import org.eclipse.egit.github.core.User;
+
+import static com.github.mobile.Intents.EXTRA_COMMENT;
+import static com.github.mobile.Intents.EXTRA_ISSUE_NUMBER;
+import static com.github.mobile.Intents.EXTRA_REPOSITORY_NAME;
+import static com.github.mobile.Intents.EXTRA_REPOSITORY_OWNER;
+import static com.github.mobile.Intents.EXTRA_USER;
 
 /**
  * Activity to create a comment on an {@link Issue}

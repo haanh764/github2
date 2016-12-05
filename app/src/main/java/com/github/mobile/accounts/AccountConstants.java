@@ -9,25 +9,17 @@ public interface AccountConstants {
     /**
      * Account type
      */
-    String ACCOUNT_TYPE = "jp.forkhub";
+    String ACCOUNT_TYPE = "jp.github";
 
     /**
      * Account name
      */
-    String ACCOUNT_NAME = "ForkHub";
+    String ACCOUNT_NAME = "GitHub";
 
     /**
      * Provider authority
      */
-    String PROVIDER_AUTHORITY = "jp.forkhub.sync";
+    String PROVIDER_AUTHORITY = "jp.github.sync";
 
-    /**
-     * Application note URL
-     */
-    String APP_NOTE_URL = "https://github.com/jonanp/ForkHub";
 
-    /**
-     * Application note
-     */
-    String APP_NOTE = "ForkHub";
 }

@@ -15,8 +15,6 @@
  */
 package com.github.mobile.ui.issue;
 
-import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
-import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -34,6 +32,9 @@ import com.github.mobile.ui.ConfirmDialogFragment;
 import com.github.mobile.ui.DialogFragmentActivity;
 import com.github.mobile.ui.user.HomeActivity;
 import com.google.inject.Inject;
+
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
+import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
 
 /**
  * Activity to display a list of saved {@link IssueFilter} objects

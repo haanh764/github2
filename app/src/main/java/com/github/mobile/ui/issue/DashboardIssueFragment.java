@@ -15,7 +15,6 @@
  */
 package com.github.mobile.ui.issue;
 
-import static com.github.mobile.RequestCodes.ISSUE_VIEW;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -29,12 +28,14 @@ import com.github.mobile.ui.PagedItemFragment;
 import com.github.mobile.util.AvatarLoader;
 import com.google.inject.Inject;
 
-import java.util.List;
-import java.util.Map;
-
 import org.eclipse.egit.github.core.RepositoryIssue;
 import org.eclipse.egit.github.core.client.PageIterator;
 import org.eclipse.egit.github.core.service.IssueService;
+
+import java.util.List;
+import java.util.Map;
+
+import static com.github.mobile.RequestCodes.ISSUE_VIEW;
 
 /**
  * Fragment to display a pageable list of dashboard issues
